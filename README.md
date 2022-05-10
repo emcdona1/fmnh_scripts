@@ -22,6 +22,17 @@ This repository contains miscellaneous scripts for use by FMNH staff, interns, a
   - Drawing (rectangle tool)
 
 -----
+
+#### Test_train_split_an_image_set_with_metadata.ipynb
+- _About_: Given a folder of images in Google Drive, this script creates a duplicate folder with train/test splits.
+- _Preconditions_: A folder of images in Google Drive -- either a single folder with images and metadata intermingled, or multiple folders with only metadata in the root.  (For the latter, only can do stratified sampling).  Authenticate your Google Drive in Colab ([tutorial](https://colab.research.google.com/notebooks/io.ipynb#scrollTo=u22w3BFiOveA)).
+- _Inputs_: A Google Drive folder containing one dataset.
+- _Outputs_: A Google Drive folder (with editor access).
+- _Known Limitations_:
+  - Sampling is not random -- since our specimen image files are often named `specimen_id-image_count.tif` and are retrieved alphabetically, we sample images evenly across the entire folder.
+  - In a flat folder
+
+-----
 ### Acknowledgements
 
 Thanks and credit to the Grainger Bioinformatics Center and FMNH botany collections.
